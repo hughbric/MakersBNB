@@ -4,26 +4,33 @@ This is a web application that allows users to list spaces they have available, 
 
 ## User Stories :point_down:
 
-1. As a new user
-	 so I can have an account
-	 I need to be able to sign up.
+### #1
+```
+As a new user
+So I can have an account
+I need to be able to sign up.
+```
 
-2. As an existing user
-	 so that I can access my account
-	 I want to be able to login
+### #2
+```
+As an existing user
+So that I can access my account
+I want to be able to login
+```
+### #3
+```
+As an existing user
+So that i can exit my account
+I want to be able to log out
+```
 
-3.	As an existing user
-		so that i can exit my account
-		I want to be able to log out
-
-4.  As a user
+### #4
+```
+As a user
 so that I can advertise a space
 I want to be able to list a new space.
+```
 
-5.
-6.
-7.
-8.
 
 ## Headline specifications
 
