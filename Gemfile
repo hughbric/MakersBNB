@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.6.0'
+ruby '2.5.0'
 
 gem 'data_mapper', '~> 1.2.0'
 gem 'dm-postgres-adapter', '~> 1.2'
