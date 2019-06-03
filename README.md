@@ -4,7 +4,6 @@ This is a web application that allows users to list spaces they have available, 
 
 ## User Stories :point_down:
 
-### #1
 ```
 As a new user
 So I can have an account
@@ -37,7 +36,7 @@ I want to be able to describe it and set a price per night.
 ```
 ```
 As a space-owner
-So thart my space is not double booked
+So that my space is not double booked
 I want to be able to specify what dates my space is available on.
 ```
 ```
