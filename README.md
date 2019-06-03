@@ -1,5 +1,3 @@
-EDIT ATTEMPT 1
-
 
 
 # MakersBNB challenge :house_with_garden:
