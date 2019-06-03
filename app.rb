@@ -13,11 +13,9 @@ class MakersBNB < Sinatra::Base
 
   post '/spaces/new' do
     redirect '/spaces'
-    p 123
   end
 
   get '/spaces' do
-    p 456
     erb :'spaces/index'
   end
 
