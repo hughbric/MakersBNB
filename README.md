@@ -6,7 +6,15 @@ This is a web application that allows users to list spaces they have available, 
 
 ## User Stories :point_down:
 
+1. As a user I can sign up to bnb
 
+2.
+3.
+4.
+5.
+6.
+7.
+8.
 
 ## Headline specifications
 
