@@ -10,27 +10,56 @@ As a new user
 So I can have an account
 I need to be able to sign up.
 ```
-
-### #2
 ```
 As an existing user
 So that I can access my account
 I want to be able to login
 ```
-### #3
 ```
 As an existing user
 So that i can exit my account
 I want to be able to log out
 ```
-
-### #4
 ```
-As a user
+As a space-owner
 so that I can advertise a space
 I want to be able to list a new space.
 ```
-
+```
+As a space-owner
+Because I have multiple rooms
+I want to be able to list more than one room.
+```
+```
+As a space-owner
+So that I can give more information about the space
+I want to be able to describe it and set a price per night.
+```
+```
+As a space-owner
+So thart my space is not double booked
+I want to be able to specify what dates my space is available on.
+```
+```
+As a space-seeker
+So that I can use a space
+I want to be able to request to hire a space on a specific date that is available.
+```
+```
+As a space-owner
+So that I can approve who stays
+I want to be able to approve or deny requests from guests.
+```
+```
+As a space-owner
+So I don't have to manually update availability after a booking
+I want booked dates to automatically become unavailable.
+```
+```
+As a space-owner
+So that I can choose bookings that suit me
+I want to see the space available until I approve the request for hire.
+```
 
 ## Headline specifications
 
