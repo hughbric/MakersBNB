@@ -1,5 +1,4 @@
 require 'sinatra/base'
-require_relative './lib/user'
 require_relative 'lib/database_connection_setup'
 
 class MakersBNB < Sinatra::Base
@@ -26,5 +25,16 @@ class MakersBNB < Sinatra::Base
   get '/spaces' do
     @spaces = Space.all
     erb :'spaces/index'
+  end
+
+  get '/sessions/new' do
+    erb :login
+  end
+
+  post '/sessions/new' do
+    user = User.authenticate(email: params[:email], password: params[:password])
+    redirect '/sessions/new' if user.nil?
+
+    redirect '/spaces'
   end
 end
