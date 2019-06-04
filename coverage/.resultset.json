@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/breycarr/Documents/MakersBNB/app.rb": [
+      "/Users/kiri/Documents/GitHub/MakersBNB/app.rb": [
         1,
         1,
         null,
@@ -27,7 +27,7 @@
         null,
         null
       ],
-      "/Users/breycarr/Documents/MakersBNB/spec/features/space_entry_spec.rb": [
+      "/Users/kiri/Documents/GitHub/MakersBNB/spec/features/space_entry_spec.rb": [
         1,
         null,
         1,
@@ -43,12 +43,12 @@
         null,
         null
       ],
-      "/Users/breycarr/Documents/MakersBNB/spec/space_spec.rb": [
+      "/Users/kiri/Documents/GitHub/MakersBNB/spec/space_spec.rb": [
         null,
         null,
         null
       ]
     },
-    "timestamp": 1559644630
+    "timestamp": 1559650166
   }
 }
