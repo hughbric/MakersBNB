@@ -1,0 +1,24 @@
+<style>
+	h2 {
+		text-align: center;
+		margin-top: 100px;
+	}
+
+	div {
+		text-align: center;
+		margin-top: 50px;
+	}
+</style>
+
+<h2>Book a Space</h2> 
+
+	<% @spaces.each do |space| %>
+
+  <div>
+    <h3><%= space.name %></h3>
+    <p><%= space.description %></p>
+    <p>£<%= space.price %> / night</p>
+    <p style='color: red'>Avaliablility? </p>
+  </div>
+
+<% end %>
