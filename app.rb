@@ -14,10 +14,6 @@ class MakersBNB < Sinatra::Base
     redirect '/spaces'
   end
 
-  get '/spaces' do
-    "Book a Space"
-  end
-
   get '/spaces/new' do
     erb :'spaces/new'
   end
