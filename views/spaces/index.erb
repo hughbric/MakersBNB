@@ -1,1 +1,10 @@
-<h2>Comfortable warm bed, double room.</h2>
+<h2>Spaces</h2>
+
+<% @spaces.each do |space| %>
+
+  <div>
+    <h3><%= space.name %></h3>
+    <p><%= space.description %></p>
+  </div>
+
+<% end %>
