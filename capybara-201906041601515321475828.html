@@ -14,6 +14,8 @@
     text-align: center;
   }
 
+  
+
 </style>
 
 <h2>Book a Space</h2> 
@@ -24,16 +26,6 @@
     <input type='submit' value='List Spaces'>
 </form>
 
-<% @spaces.each do |space| %>
-  <a href='/spaces/bookings/<%= space.id %>'>
-    <button>
-      <h3><%= space.name %></h3>
-      <p><%= space.description %></p>
-      <p>£<%= space.price %> / night</p>
-      <p>Available Dates: <%= space.checkin %> to <%= space.checkout %></p>
-    </button>
-  </a><br>
 
-  <% end %>
   
   
