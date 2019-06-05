@@ -1,6 +1,8 @@
 require 'data_mapper'
 require 'dm-postgres-adapter'
+require 'dm-validations'
 require_relative 'space'
+require_relative 'user'
 
 if ENV['RACK_ENV'] == 'test'
   DataMapper.setup(
