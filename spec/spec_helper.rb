@@ -17,7 +17,6 @@ RSpec.configure do |config|
   end
 end
 
-
 require './app'
 
 require 'capybara/rspec'

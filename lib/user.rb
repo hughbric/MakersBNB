@@ -2,13 +2,15 @@ class User
   include DataMapper::Resource
 
   property :id,          Serial
-  property :email,       String, :required => true, :unique => true, :format => :email_address
+  property :email,       String,  :required => true,
+                                  :unique => true,
+                                  :format => :email_address
   property :password,    String, :required => true
 
   def self.authenticate(email:, password:)
-    allUsersWithEmail = all(email: email)
-    return nil if allUsersWithEmail.length != 1
-    user = allUsersWithEmail.first
+    all_users_with_email = all(email: email)
+    return nil if all_users_with_email.length != 1
+    user = all_users_with_email.first
     return nil unless user.password == password
     user
   end
