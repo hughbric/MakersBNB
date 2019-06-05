@@ -5,6 +5,7 @@ class MakersBNB < Sinatra::Base
   enable :sessions
 
   get '/' do
+    redirect '/spaces' if session[:user] != nil
     erb :index
   end
 
