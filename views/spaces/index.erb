@@ -1,24 +1,19 @@
-<style>
-	h2 {
-		text-align: center;
-		margin-top: 100px;
-	}
+<head>
+ <link rel="stylesheet" href="/style.css"/>
+</head>
 
-	div {
-		text-align: center;
-		margin-top: 50px;
-	}
-</style>
+<body>
+	<a href='/sessions/logout'>Sign out</a>
+	<h2>Book a Space</h2>
 
-<h2>Book a Space</h2> 
+		<% @spaces.each do |space| %>
 
-	<% @spaces.each do |space| %>
+	  <div>
+	    <h3><%= space.name %></h3>
+	    <p><%= space.description %></p>
+	    <p>£<%= space.price %> / night</p>
+	    <p style='color: red'>Avaliablility? </p>
+	  </div>
 
-  <div>
-    <h3><%= space.name %></h3>
-    <p><%= space.description %></p>
-    <p>£<%= space.price %> / night</p>
-    <p style='color: red'>Avaliablility? </p>
-  </div>
-
-<% end %>
+	<% end %>
+</body>
