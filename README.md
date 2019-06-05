@@ -27,7 +27,7 @@ I want to be able to list a new space.
 ```
 As a space-owner
 Because I have multiple rooms
-I want to be able to list more than one room.
+I want to be able to list more than one space.
 ```
 ```
 As a space-owner
