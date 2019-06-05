@@ -19,12 +19,14 @@
         null,
         null,
         1,
-        1,
+        2,
         null,
         null,
         1,
-        1,
-        1,
+        2,
+        null,
+        null,
+        2,
         null,
         null,
         1,
@@ -33,7 +35,13 @@
         null,
         null,
         1,
-        0,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         null
@@ -66,6 +74,9 @@
       ],
       "/Users/kiri/Documents/GitHub/MakersBNB/spec/features/space_booking_spec.rb": [
         1,
+        1,
+        null,
+        1,
         null,
         1,
         1,
@@ -74,9 +85,18 @@
         1,
         1,
         null,
-        1,
-        0,
         null,
+        null
+      ],
+      "/Users/kiri/Documents/GitHub/MakersBNB/spec/helpers/list_space.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         null
       ],
       "/Users/kiri/Documents/GitHub/MakersBNB/spec/features/space_entry_spec.rb": [
@@ -96,6 +116,6 @@
         null
       ]
     },
-    "timestamp": 1559662825
+    "timestamp": 1559745610
   }
 }

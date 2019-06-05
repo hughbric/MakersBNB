@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-06-04T16:40:25+01:00">2019-06-04T16:40:25+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-06-05T15:40:10+01:00">2019-06-05T15:40:10+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">96.3%</span></span>
+    (<span class="covered_percent"><span class="green">100.0%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.06
+         1.1
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>5</b> files in total.
-    <b>54</b> relevant lines. 
-    <span class="green"><b>52</b> lines covered</span> and
-    <span class="red"><b>2</b> lines missed </span>
+    <b>6</b> files in total.
+    <b>64</b> relevant lines. 
+    <span class="green"><b>64</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -52,12 +52,12 @@
       
       <tr>
         <td class="strong"><a href="#2f2ed0ed04c2ea0023802ab9be362f03f5ab5a87" class="src_link" title="app.rb">app.rb</a></td>
-        <td class="green strong">95.0 %</td>
-        <td>35</td>
-        <td>20</td>
-        <td>19</td>
-        <td>1</td>
-        <td>1.2</td>
+        <td class="green strong">100.0 %</td>
+        <td>43</td>
+        <td>22</td>
+        <td>22</td>
+        <td>0</td>
+        <td>1.3</td>
       </tr>
       
       <tr>
@@ -82,12 +82,12 @@
       
       <tr>
         <td class="strong"><a href="#3c9270df44c7b2f49ab64ef2e4f80905f696caff" class="src_link" title="spec/features/space_booking_spec.rb">spec/features/space_booking_spec.rb</a></td>
-        <td class="yellow strong">88.89 %</td>
-        <td>13</td>
+        <td class="green strong">100.0 %</td>
+        <td>14</td>
         <td>9</td>
-        <td>8</td>
-        <td>1</td>
-        <td>0.9</td>
+        <td>9</td>
+        <td>0</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -96,6 +96,16 @@
         <td>14</td>
         <td>11</td>
         <td>11</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#fafc96356684e2bc2a0c2e03636715ff5aaf2c66" class="src_link" title="spec/helpers/list_space.rb">spec/helpers/list_space.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>9</td>
+        <td>8</td>
+        <td>8</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -119,11 +129,11 @@
         <div class="source_table" id="2f2ed0ed04c2ea0023802ab9be362f03f5ab5a87">
   <div class="header">
     <h3>app.rb</h3>
-    <h4><span class="green">95.0 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>20</b> relevant lines. 
-      <span class="green"><b>19</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <b>22</b> relevant lines. 
+      <span class="green"><b>22</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -232,8 +242,8 @@
           <code class="ruby">  get &#39;/spaces/new&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="18">
+          <span class="hits">2</span>
           
           <code class="ruby">    erb :&#39;spaces/new&#39;</code>
         </li>
@@ -256,85 +266,133 @@
           <code class="ruby">  post &#39;/spaces/new&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="22">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="22">
+          <span class="hits">2</span>
           
-          <code class="ruby">    Space.create(name: params[:name], description: params[:description], price: params[:price], checkin: params[:checkin], checkout: params[:checkout])</code>
+          <code class="ruby">    Space.create(name: params[:name], description: params[:description],\</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="23">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="23">
           
-          <code class="ruby">    redirect &#39;/spaces&#39;</code>
+          
+          <code class="ruby">      price: params[:price], checkin: params[:checkin],\</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="24">
           
           
+          <code class="ruby">      checkout: params[:checkout])</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="25">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    redirect &#39;/spaces&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="never" data-hits="" data-linenumber="27">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="26">
+        <li class="covered" data-hits="1" data-linenumber="28">
           <span class="hits">1</span>
           
           <code class="ruby">  get &#39;/spaces&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="27">
+        <li class="covered" data-hits="3" data-linenumber="29">
           <span class="hits">3</span>
           
           <code class="ruby">    @spaces = Space.all</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="28">
+        <li class="covered" data-hits="3" data-linenumber="30">
           <span class="hits">3</span>
           
           <code class="ruby">    erb :&#39;spaces/index&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="30">
+        <li class="never" data-hits="" data-linenumber="32">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="31">
+        <li class="covered" data-hits="1" data-linenumber="33">
           <span class="hits">1</span>
           
-          <code class="ruby">  get &quot;/spaces/bookings/:id&quot; do</code>
+          <code class="ruby">  get &#39;/spaces/bookings/:id&#39; do</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="32">
+        <li class="covered" data-hits="1" data-linenumber="34">
+          <span class="hits">1</span>
           
+          <code class="ruby">    id = params[:id]</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="35">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @record = Space.first(:id =&gt; id)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="36">
+          <span class="hits">1</span>
           
           <code class="ruby">    erb :&#39;spaces/bookings&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="33">
+        <li class="never" data-hits="" data-linenumber="37">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="34">
+        <li class="never" data-hits="" data-linenumber="38">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="35">
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby">  # get &#39;/spaces/requests/:id&#39; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby">  #   erb :&#39;spaces/requests&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby">  # end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="43">
           
           
           <code class="ruby">end</code>
@@ -518,11 +576,11 @@
         <div class="source_table" id="3c9270df44c7b2f49ab64ef2e4f80905f696caff">
   <div class="header">
     <h3>spec/features/space_booking_spec.rb</h3>
-    <h4><span class="yellow">88.89 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>9</b> relevant lines. 
-      <span class="green"><b>8</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <span class="green"><b>9</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -535,64 +593,64 @@
           <code class="ruby">require &#39;spec_helper&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="2">
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require_relative &#39;../helpers/list_space&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="3">
-          <span class="hits">1</span>
-          
-          <code class="ruby">feature &#39;Booking a space&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">  scenario &#39;the space user books a space&#39; do</code>
+          <code class="ruby">feature &#39;Booking a space&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="5">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="5">
           
-          <code class="ruby">    visit &#39;/spaces&#39;</code>
+          
+          <code class="ruby">  </code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
-          <code class="ruby">    save_and_open_page</code>
+          <code class="ruby">  scenario &#39;the space user books a space&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &#39;checkin&#39;, with: &#39;20/07/2019&#39;</code>
+          <code class="ruby">    list_space</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &#39;checkout&#39;, with: &#39;22/07/2019&#39;</code>
+          <code class="ruby">    click_link(&#39;spaceID_1&#39;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    expect(page).to have_content &#39;Please book your space&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
-          <code class="ruby">    find_link(&quot;a&quot;).click</code>
+          <code class="ruby">    expect(page).to have_content &#39;Comfortable warm bed, double room.&#39;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    expect(page).to have_content &#39;Your space has been booked!&#39;</code>
+          <code class="ruby">    expect(page).to have_button&#39;Request booking&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
@@ -602,6 +660,12 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby">end</code>
@@ -705,6 +769,79 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="fafc96356684e2bc2a0c2e03636715ff5aaf2c66">
+  <div class="header">
+    <h3>spec/helpers/list_space.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>8</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">def list_space</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  visit &#39;/spaces/new&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  fill_in(&#39;name&#39;, with: &#39;Comfortable warm bed, double room.&#39;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  fill_in(&#39;description&#39;, with: &#39;Lorem Ipsum&#39;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  fill_in(&#39;price&#39;, with: &#39;100&#39;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  fill_in &#39;checkin&#39;, with: &#39;20/07/2019&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  fill_in &#39;checkout&#39;, with: &#39;22/07/2019&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  click_button &#39;List space&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby">end</code>

@@ -1,13 +1,14 @@
 require 'spec_helper'
+require_relative '../helpers/list_space'
 
 feature 'Booking a space' do
+  
   scenario 'the space user books a space' do
-    visit '/spaces'
-    save_and_open_page
-    fill_in 'checkin', with: '20/07/2019'
-    fill_in 'checkout', with: '22/07/2019'
-
-    find_link("a").click
-    expect(page).to have_content 'Your space has been booked!'
+    list_space
+    click_link('spaceID_1')
+    expect(page).to have_content 'Please book your space'
+    expect(page).to have_content 'Comfortable warm bed, double room.'
+    expect(page).to have_button'Request booking'
   end
+
 end

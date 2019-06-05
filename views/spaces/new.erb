@@ -10,7 +10,17 @@
     text-align: center;
   }
 
+  div {
+    position: fixed;
+    top: 10;
+    right: 50;
+  }
+
 </style>
+
+<div>
+  <a href='/spaces'>Spaces</a> | <a href='/spaces/requests'>Requests</a>
+</div>
 
 <h1 style='margin-top: 100px; text-align: center'>Create a new space:</h1>
 
@@ -22,7 +32,7 @@
   <h3>Price per night:</h3>
   <input type='text' id='price' name='price' placeholder='Enter price per night'><br>
   <h3>Select dates:</h3>
-  <input type='date' id='checkin' name='checkin' min="2019" max='2025'>
-  <input type='date' id='checkout' name='checkout' min='2019' max='2025'><br><br>
+  <input type='date' id='checkin' name='checkin'>
+  <input type='date' id='checkout' name='checkout'><br><br>
   <button type='submit'>List space</button>
 </form>

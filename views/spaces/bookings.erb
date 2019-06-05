@@ -1,1 +1,22 @@
-<h2>Your space has been booked!</h2>
+<style>
+</style>
+
+<body>
+  <h2>Please book your space</h2>
+
+  <form action='/spaces/requests' method='post'>
+
+    Hello <%= @record.name %>. <br>
+
+    Room description <br><div><%= @record.description %></div><br>
+
+    The price per night costs: <%= @record.price %>
+    <br>
+
+    <label for="arrival">Request from:</label>
+    <input type="date" name="request_from" min="<%= @record.checkin %>" max="<%= @record.checkout %>">
+    <label for="departure">Request until:</label>
+    <input type="date" name="request_until" min="<%= @record.checkin %>" max="<%= @record.checkout %>">
+    <input type="submit" value="Request booking">
+  </form>
+</body>
