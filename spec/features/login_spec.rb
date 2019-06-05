@@ -1,5 +1,7 @@
 feature 'Login' do
   scenario 'an existing user navigates to the log in page' do
+    User.create(email: 'user@makersbnb.com', password: 'passw0rd')
+
     visit('/')
     click_link 'Log in'
     expect(page).to have_content("Log in to MakersBnB")

@@ -10,6 +10,7 @@ class MakersBNB < Sinatra::Base
 
   post '/users' do
     User.create(email: params[:email], password: params[:password])
+    p User.all
     redirect '/spaces'
   end
 
