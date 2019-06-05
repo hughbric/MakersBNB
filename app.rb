@@ -20,7 +20,6 @@ class MakersBNB < Sinatra::Base
   end
 
   post '/spaces/new' do
-<<<<<<< HEAD
     Space.create(
       name: params[:name],
       description: params[:description],
@@ -28,11 +27,7 @@ class MakersBNB < Sinatra::Base
       checkin: params[:checkin],
       checkout: params[:checkout]
     )
-=======
-    Space.create(name: params[:name], description: params[:description],\
-      price: params[:price], checkin: params[:checkin],\
-      checkout: params[:checkout])
->>>>>>> master
+
     redirect '/spaces'
   end
 
@@ -41,7 +36,6 @@ class MakersBNB < Sinatra::Base
     erb :'spaces/index'
   end
 
-<<<<<<< HEAD
   get '/sessions/new' do
     erb :login
   end
@@ -60,7 +54,7 @@ class MakersBNB < Sinatra::Base
     session[:user] = nil
     redirect '/sessions/new'
   end
-=======
+
   get '/spaces/bookings/:id' do
     id = params[:id]
     @record = Space.first(:id => id)
@@ -71,5 +65,4 @@ class MakersBNB < Sinatra::Base
   #   erb :'spaces/requests'
   # end
 
->>>>>>> master
 end
