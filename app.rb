@@ -10,6 +10,7 @@ class MakersBNB < Sinatra::Base
   end
 
   post '/users' do
+    redirect '/' if params[:password] != params[:password_confirmation]
     User.create(email: params[:email], password: params[:password])
     redirect '/spaces'
   end
