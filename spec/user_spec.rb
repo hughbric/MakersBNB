@@ -16,7 +16,5 @@ describe User do
       login_user = User.authenticate(email: "notexistant@makers.com", password: "password")
       expect(login_user).to be_nil
     end
-
   end
-
 end

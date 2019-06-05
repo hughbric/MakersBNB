@@ -1,55 +1,32 @@
-<style>
 
-  h2 {
-    text-align: center;
-    margin-top: 100px;
-  }
-
-  body {
-    text-align: center;
-    margin-top: 20px;
-  }
-
-  form {
-    text-align: center;
-  }
-
-  div {
-    position: fixed;
-    top: 10;
-    right: 50;
-  }
-
-</style>
-
-<div>
-  <a href='/spaces'>Spaces</a> | <a href='/spaces/requests'>Requests</a>
-</div>
+<head>
+  <title>Book a Space</title>
+  <link rel="stylesheet" href="/style.css"/>
+</head>
 
 <body>
+  <div>
+    <a href='/spaces'>Spaces</a> | <a href='/spaces/requests'>Requests</a> | <a href='/sessions/logout'>Sign out</a>
+  </div>
 
-<button onclick="location.href='/spaces/new'">List a space</button>
-
-
-<h2>Book a Space</h2>
-
-<form action="/spaces/bookings" method="post">
+  <button onclick="location.href='/spaces/new'">List a space</button>
+  <h2>Book a Space</h2>
+  <form action="/spaces/bookings" method="post">
     <input type='date' id='checkin' name='checkin'>
     <input type='date' id='checkout' name='checkout'>
     <input type='submit' value='List Spaces'>
-</form>
+  </form>
 
-<% @spaces.each do |space| %>
+  <% @spaces.each do |space| %>
 
-<a href='/spaces/bookings/<%= space.id %>' id='spaceID_<%= space.id %>'>
+  <a href='/spaces/bookings/<%= space.id %>' id='spaceID_<%= space.id %>'>
     <button class='listing'>
-      <h3><%= space.name %></h3>
-      <p><%= space.description %></p>
-      <p>£<%= space.price %> / night</p>
+    <h3><%= space.name %></h3>
+    <p><%= space.description %></p>
+    <p>£<%= space.price %> / night</p>
     </button>
-     <br>
- </a>
+    <br>
+  </a>
 
   <% end %>
-
-  </body>
+</body>
