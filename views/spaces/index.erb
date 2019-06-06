@@ -9,7 +9,9 @@
     <a href='/spaces'>Spaces</a> | <a href='/spaces/requests'>Requests</a> | <a href='/sessions/logout'>Sign out</a>
   </div>
 
-  <button onclick="location.href='/spaces/new'">List a space</button>
+<form action='/spaces/new'>
+  <button>List a space</button>
+</form>
   <h2>Book a Space</h2>
   <form action="/spaces/bookings" method="post">
     <input type='date' id='checkin' name='checkin'>
