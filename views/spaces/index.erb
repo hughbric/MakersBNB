@@ -11,11 +11,11 @@
 
   <button onclick="location.href='/spaces/new'">List a space</button>
   <h2>Book a Space</h2>
-  <form action="/spaces/bookings" method="post">
+  <%# <form action="/spaces/bookings" method="post">
     <input type='date' id='checkin' name='checkin'>
     <input type='date' id='checkout' name='checkout'>
     <input type='submit' value='List Spaces'>
-  </form>
+  </form> %>
 
   <% @spaces.each do |space| %>
 

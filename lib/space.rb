@@ -7,7 +7,6 @@ class Space
   property :price,       Integer, required: true
   property :checkin,     Date,    required: true
   property :checkout,    Date,    required: true
-  property :userid,      Serial
 
-  # belongs_to :user
+  belongs_to :user
 end

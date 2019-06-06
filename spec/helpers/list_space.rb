@@ -1,5 +1,4 @@
 def list_space
-  visit '/spaces/new'
   fill_in('name', with: 'Comfortable warm bed, double room.')
   fill_in('description', with: 'Lorem Ipsum')
   fill_in('price', with: '100')

@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/student/Projects/team-projects/MakersBNB/app.rb": [
+      "/Users/student/Documents/Makers/JavaScript/MakersBNB/app.rb": [
         1,
         1,
         null,
@@ -9,29 +9,36 @@
         1,
         null,
         1,
-        5,
-        5,
+        7,
+        7,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        4,
+        3,
+        3,
+        null,
+        3,
         null,
         null,
         1,
         2,
-        1,
-        1,
         null,
         null,
         1,
         2,
-        null,
-        null,
-        1,
         2,
         null,
         2,
         null,
         null,
         1,
-        5,
-        5,
+        7,
+        7,
         null,
         null,
         1,
@@ -62,7 +69,7 @@
         null,
         null
       ],
-      "/Users/student/Projects/team-projects/MakersBNB/spec/features/login_spec.rb": [
+      "/Users/student/Documents/Makers/JavaScript/MakersBNB/spec/features/login_spec.rb": [
         1,
         1,
         1,
@@ -79,7 +86,7 @@
         null,
         null
       ],
-      "/Users/student/Projects/team-projects/MakersBNB/spec/features/logout_spec.rb": [
+      "/Users/student/Documents/Makers/JavaScript/MakersBNB/spec/features/logout_spec.rb": [
         1,
         1,
         1,
@@ -94,7 +101,7 @@
         null,
         null
       ],
-      "/Users/student/Projects/team-projects/MakersBNB/spec/features/signup_spec.rb": [
+      "/Users/student/Documents/Makers/JavaScript/MakersBNB/spec/features/signup_spec.rb": [
         1,
         1,
         1,
@@ -115,9 +122,20 @@
         null,
         null
       ],
-      "/Users/student/Projects/team-projects/MakersBNB/spec/features/space_booking_spec.rb": [
+      "/Users/student/Documents/Makers/JavaScript/MakersBNB/spec/features/space_booking_spec.rb": [
         1,
         1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
         null,
         1,
         null,
@@ -128,37 +146,51 @@
         1,
         1,
         null,
-        null,
-        null
-      ],
-      "/Users/student/Projects/team-projects/MakersBNB/spec/helpers/list_space.rb": [
         1,
         1,
         1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/student/Projects/team-projects/MakersBNB/spec/features/space_entry_spec.rb": [
         1,
         null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
         null,
         null
       ],
-      "/Users/student/Projects/team-projects/MakersBNB/spec/user_spec.rb": [
+      "/Users/student/Documents/Makers/JavaScript/MakersBNB/spec/helpers/list_space.rb": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "/Users/student/Documents/Makers/JavaScript/MakersBNB/spec/features/space_entry_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/student/Documents/Makers/JavaScript/MakersBNB/spec/user_spec.rb": [
         1,
         1,
         1,
@@ -181,6 +213,6 @@
         null
       ]
     },
-    "timestamp": 1559755361
+    "timestamp": 1559822792
   }
 }
