@@ -17,7 +17,6 @@ class MakersBNB < Sinatra::Base
     redirect '/' if params[:password] != params[:password_confirmation]
     User.create(email: params[:email], password: params[:password])
     session[:user] = User.authenticate(email: params[:email], password: params[:password])
-    p session[:user]
     redirect '/spaces'
   end
 
@@ -35,8 +34,6 @@ class MakersBNB < Sinatra::Base
       checkout: params[:checkout],
       user_id: user.id
     )
-    p space
-    p space.saved?
     redirect '/spaces'
   end
 
