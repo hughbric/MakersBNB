@@ -2,6 +2,12 @@ require 'spec_helper'
 
 feature 'Adding a space' do
   scenario 'user should be able to add a space' do
+    User.create(email: 'user@makersbnb.com', password: 'passw0rd')
+    visit('/')
+    click_link 'Log in'
+    fill_in 'email', with: 'user@makersbnb.com'
+    fill_in 'password', with: 'passw0rd'
+    click_button 'Log in'
     visit '/spaces/new'
     fill_in('name', with: 'Comfortable warm bed, double room.')
     fill_in('description', with: 'Lorem Ipsum')

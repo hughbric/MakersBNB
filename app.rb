@@ -16,6 +16,7 @@ class MakersBNB < Sinatra::Base
   post '/users' do
     redirect '/' if params[:password] != params[:password_confirmation]
     User.create(email: params[:email], password: params[:password])
+    session[:user] = User.authenticate(email: params[:email], password: params[:password])
     redirect '/spaces'
   end
 
@@ -24,8 +25,17 @@ class MakersBNB < Sinatra::Base
   end
 
   post '/spaces/new' do
-    Space.create(name: params[:name], description: params[:description], price: params[:price], checkin: params[:checkin], checkout: params[:checkout])
-
+    user = session[:user]
+    space = Space.create(
+      name: params[:name],
+      description: params[:description],
+      price: params[:price],
+      checkin: params[:checkin],
+      checkout: params[:checkout],
+      user_id: user.id
+    )
+    p space
+    p space.saved?
     redirect '/spaces'
   end
 
@@ -40,6 +50,7 @@ class MakersBNB < Sinatra::Base
 
   post '/sessions/new' do
     session[:user] = User.authenticate(email: params[:email], password: params[:password])
+    p session[:user]
     redirect '/sessions/new' if session[:user].nil?
 
     redirect '/spaces'

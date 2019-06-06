@@ -5,6 +5,7 @@ require_relative 'space'
 require_relative 'user'
 
 if ENV['RACK_ENV'] == 'test'
+  # DataMapper::Logger.new(STDOUT, :debug)
   DataMapper.setup(
     :default, 'postgres://:@localhost/makersbnb_test'
   )

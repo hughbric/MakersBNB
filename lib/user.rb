@@ -7,6 +7,8 @@ class User
                                   :format => :email_address
   property :password,    String, :required => true
 
+  has n, :spaces
+
   def self.authenticate(email:, password:)
     all_users_with_email = all(email: email)
     return nil if all_users_with_email.length != 1
