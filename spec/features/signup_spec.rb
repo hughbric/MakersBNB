@@ -6,6 +6,8 @@ feature 'Signup' do
   scenario 'a new user signs up and is taken to /spaces page' do
     sign_up
     expect(page).to have_content("Book a Space")
+    expect(page).not_to have_content("Passwords don't match")
+
   end
 
   scenario 'passwords do not match: user taken back to sign-up page' do

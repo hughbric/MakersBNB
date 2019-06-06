@@ -53,8 +53,10 @@ class MakersBNB < Sinatra::Base
 
   post '/sessions/new' do
     session[:user] = User.authenticate(email: params[:email], password: params[:password])
-    redirect '/sessions/new' if session[:user].nil?
-
+    if session[:user].nil?
+      flash[:nomatch] = "Your username or password is incorrect"
+      redirect '/sessions/new'
+    end
     redirect '/spaces'
   end
 
