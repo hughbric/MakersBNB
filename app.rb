@@ -9,6 +9,10 @@ class MakersBNB < Sinatra::Base
     erb :index
   end
 
+  get '/fake' do
+    erb :index_mock
+  end
+
   post '/users' do
     redirect '/' if params[:password] != params[:password_confirmation]
     User.create(email: params[:email], password: params[:password])

@@ -1,0 +1,85 @@
+html {
+  width: 100%;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+	text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #484848;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+label {
+  margin-top: 10px;
+  display: block;
+  text-align: left;
+  text-indent: 18px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+input {
+  border: none;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.field {
+  height: 40px;
+  width: 350px;
+  border: 1px solid lightgrey;
+  padding: 0 1px 0 10px;
+  color: #555555;
+}
+
+.button {
+  position: absolute;
+  height: 35px;
+  width: 100px;
+  margin-top: 20px;
+  background-color: #ff4d4d;
+  color: antiquewhite;
+  left: 378px;
+}
+
+.signUpForm {
+  margin-top: -30px;
+}
+
+.mainTile{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: rgb(255, 255, 255) none repeat scroll 0% 0% !important;
+  padding: 24px 24px 24px !important;
+  width: 430px;
+  height: 480px;
+  border-radius: 4px !important;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 16px 40px !important;
+  margin-left: 80px;
+  margin-top: 120px;
+}
+
+.divider {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+
+#navigation {
+  position: relative;
+  left: 100px;
+  top: -40px;
+}
