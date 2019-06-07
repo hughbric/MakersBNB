@@ -61,7 +61,6 @@ class MakersBNB < Sinatra::Base
 
   get '/spaces/bookings/:id' do
     id = params[:id]
-    p id
     session[:id] = id
     @record = Space.first(:id => id)
     erb :'spaces/bookings'
@@ -71,8 +70,6 @@ class MakersBNB < Sinatra::Base
     space_id = session[:id]
     # flash messsage 'Request to book has been sent'
     booking = Booking.create(arrival: params[:request_from], departure: params[:request_until], space_id: space_id)
-    p booking
-    p booking.saved?
     redirect '/spaces'
   end
 
