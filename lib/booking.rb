@@ -7,5 +7,6 @@ class Booking
   property :confirmed,    Boolean
 
   belongs_to :space
+  belongs_to :user
 
 end

@@ -1,0 +1,21 @@
+<head>
+  <title>Confirm a request</title>
+  <link rel="stylesheet" href="/style.css"/>
+</head>
+
+<body>
+
+  <body>
+    <div>
+      <a href='/spaces'>Spaces</a> | <a href='/bookings/requests'>Requests</a> | <a href='/sessions/logout'>Sign out</a>
+    </div>
+
+  <h1>Request for '<%= @booking.space.name %>'</h1>
+
+    From: <%= @booking.user.email %>
+    Date: <%= @booking.arrival %>
+  <form action='/bookings/confirmation' method='post'>
+    <button id="confirm" type="submit" name="decision" value="confirm">Confirm request from <%= @booking.user.email %></button>
+    <button id="deny" type="submit" name="decision" value="deny">Deny request from <%= @booking.user.email %></button>
+  </form>
+</body>
