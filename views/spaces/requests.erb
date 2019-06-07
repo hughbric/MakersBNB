@@ -15,7 +15,8 @@
   <% @bookings_made.each do |booking| %>
       <button class='made'>
       <h3><%= booking.space.name %></h3>
-      <p><%= "Unconfirmed" unless booking.confirmed %></p>
+      <p><%= "Unconfirmed" if booking.confirmed == nil %></p>
+      <p><%= booking.confirmed ? "Approved" : 'Denied' %></p>
       <p>Checkin: <%= booking.arrival %></p>
       <p>Checkout: <%= booking.departure %></p>
       </button>
@@ -29,7 +30,6 @@
       <button class='received'>
       <h3><%= booking.space.name %></h3>
       <p><%= "Unconfirmed" if booking.confirmed == nil %></p>
-
       <p><%= booking.confirmed ? "Approved" : "Denied" %></p>
       <p>Checkin: <%= booking.arrival %></p>
       <p>Checkout: <%= booking.departure %></p>
@@ -37,7 +37,5 @@
       <br>
     </a>
   <% end %>
-
-
 
 </body>

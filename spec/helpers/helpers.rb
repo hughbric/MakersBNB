@@ -22,6 +22,14 @@ def login
   click_button 'Log in'
 end
 
+def other_login
+  visit('/')
+  click_link 'Log in'
+  fill_in 'email', with: 'other_user@makersbnb.com'
+  fill_in 'password', with: 'passw0rd'
+  click_button 'Log in'
+end
+
 def list_space
   click_button 'List a space'
   fill_in('name', with: 'Comfortable warm bed, double room.')
