@@ -46,6 +46,8 @@ class MakersBNB < Sinatra::Base
       checkout: params[:checkout],
       user_id: user.id
     )
+    session[:checkin] = params[:checkin]
+    session[:checkout] = params[:checkout]
     if params[:name].empty?
       flash[:incorrect_details] = "Please fill in the required fields."
       redirect 'spaces/new'
@@ -69,8 +71,19 @@ class MakersBNB < Sinatra::Base
   end
 
   get '/spaces' do
-    @spaces = Space.all
+    if session[:filter_from].nil? && session[:filter_to].nil?   
+      @spaces = Space.all
+    else
+      @spaces = Space.all(:checkin.lte => session[:filter_from], :checkout.gte => session[:filter_to])
+    end
     erb :'spaces/index'
+    # Need to reset sessions after refreshing page/navigating away from page
+  end
+
+  post '/spaces/bookings' do
+    session[:filter_from] = params[:available_from]
+    session[:filter_to] = params[:available_to]
+    redirect '/spaces'
   end
 
   get '/sessions/new' do
