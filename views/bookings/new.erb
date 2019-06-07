@@ -1,0 +1,29 @@
+<head>
+  <title>Book a space</title>
+  <link rel="stylesheet" href="/style.css"/>
+</head>
+
+<body>
+
+  <body>
+    <div>
+      <a href='/spaces'>Spaces</a> | <a href='/bookings/requests'>Requests</a> | <a href='/sessions/logout'>Sign out</a>
+    </div>
+    
+  <h2>Please book your space</h2>
+  <form action='/spaces/request' method='post'>
+
+    <%= @space.name %>. <br>
+
+    Room description <br><div><%= @space.description %></div><br>
+
+    The price per night costs: <%= @space.price %>
+    <br>
+
+    <label for="arrival">Request from:</label>
+    <input type="date" name="request_from" min="<%= @space.checkin %>" max="<%= @space.checkout %>">
+    <label for="departure">Request until:</label>
+    <input type="date" name="request_until" min="<%= @space.checkin %>" max="<%= @space.checkout %>">
+    <input type="submit" value="Request to Book">
+  </form>
+</body>
