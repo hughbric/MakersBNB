@@ -2,22 +2,29 @@
 <head>
   <title>Book a Space</title>
   <link rel="stylesheet" href="/style.css"/>
+
 </head>
 
 <body>
   <div>
     <a href='/spaces'>Spaces</a> | <a href='/spaces/requests'>Requests</a> | <a href='/sessions/logout'>Sign out</a>
   </div>
-
+  <br>
+  <br>
+  <%= flash[:request_confirmation] %>
 <form action='/spaces/new'>
   <button>List a space</button>
 </form>
   <h2>Book a Space</h2>
+  
   <form action="/spaces/bookings" method="post">
-    <input type='date' id='checkin' name='checkin'>
-    <input type='date' id='checkout' name='checkout'>
-    <input type='submit' value='List Spaces'>
+    <input type='date' id='available_from' name='available_from'>
+    <input type='date' id='available_to' name='available_to'>
+    <input type='submit' value='Filter Spaces'>
   </form>
+  <br>
+  <%= flash[:dates_selected] %>
+  <br>
 
   <% @spaces.each do |space| %>
 

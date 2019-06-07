@@ -22,7 +22,13 @@ class MakersBNB < Sinatra::Base
     end
     User.create(email: params[:email], password: params[:password])
     session[:user] = User.authenticate(email: params[:email], password: params[:password])
-    redirect '/spaces'
+    p session[:user]
+    if session[:user].nil?
+      flash[:incorrect_details] = "Please fill in the required fields."
+      redirect '/'
+    else
+      redirect '/spaces'
+    end
   end
 
   get '/spaces/new' do
@@ -31,6 +37,7 @@ class MakersBNB < Sinatra::Base
 
   post '/spaces/new' do
     user = session[:user]
+    p params
     Space.create(
       name: params[:name],
       description: params[:description],
@@ -39,12 +46,44 @@ class MakersBNB < Sinatra::Base
       checkout: params[:checkout],
       user_id: user.id
     )
-    redirect '/spaces'
+    session[:checkin] = params[:checkin]
+    session[:checkout] = params[:checkout]
+    if params[:name].empty?
+      flash[:incorrect_details] = "Please fill in the required fields."
+      redirect 'spaces/new'
+    elsif params[:description].empty?
+      flash[:incorrect_details] = "Please fill in the required fields."
+      redirect 'spaces/new'
+    elsif params[:price].empty? || !params[:price].match?(/\d/)
+      flash[:correct_price] = 'Please enter a number.'
+      redirect '/spaces/new'
+    elsif params[:checkin].empty?
+      flash[:incorrect_details] = "Please fill in the required fields."
+      redirect 'spaces/new'
+    elsif params[:checkout].empty?
+      flash[:incorrect_details] = "Please fill in the required fields."
+      redirect 'spaces/new'
+    else
+
+      redirect '/spaces'
+      
+    end
   end
 
   get '/spaces' do
-    @spaces = Space.all
+    if session[:filter_from].nil? && session[:filter_to].nil?   
+      @spaces = Space.all
+    else
+      @spaces = Space.all(:checkin.lte => session[:filter_from], :checkout.gte => session[:filter_to])
+    end
     erb :'spaces/index'
+    # Need to reset sessions after refreshing page/navigating away from page
+  end
+
+  post '/spaces/bookings' do
+    session[:filter_from] = params[:available_from]
+    session[:filter_to] = params[:available_to]
+    redirect '/spaces'
   end
 
   get '/sessions/new' do
@@ -74,9 +113,14 @@ class MakersBNB < Sinatra::Base
 
   post '/spaces/request' do
     space_id = session[:id]
-    # flash messsage 'Request to book has been sent'
-    booking = Booking.create(arrival: params[:request_from], departure: params[:request_until], space_id: space_id)
-    redirect '/spaces'
+    Booking.create(arrival: params[:request_from], departure: params[:request_until], space_id: space_id)
+    if params[:request_from] >= params[:request_until]
+      flash[:incorrect_dates] = "Please enter the correct dates."
+      redirect "/spaces/bookings/#{space_id}"
+    else
+      flash[:request_confirmation] = "Booking request has been sent."
+      redirect "/spaces"
+     end   
   end
 
 end
