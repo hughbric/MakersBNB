@@ -28,7 +28,8 @@
   <a href='/spaces/confirm_request/<%= booking.id %>' id='bookingID_<%= booking.id %>'>
       <button class='received'>
       <h3><%= booking.space.name %></h3>
-      <p><%= "Unconfirmed" unless booking.confirmed %></p>
+      <p><%= "Unconfirmed" if booking.confirmed == nil %></p>
+      <p><%= "Approved" if booking.confirmed %></p>
       <p>Checkin: <%= booking.arrival %></p>
       <p>Checkout: <%= booking.departure %></p>
       </button>

@@ -87,16 +87,25 @@ class MakersBNB < Sinatra::Base
   get '/spaces/requests' do
     user = session[:user]
     @bookings_made = Booking.all(:user_id => user.id)
-    @bookings_received = Booking.all({:confirmed =>nil, Booking.space.user.id => user.id})
+    @bookings_received = Booking.all({Booking.space.user.id => user.id})git
     erb :'spaces/requests'
   end
 
   get '/spaces/confirm_request/:id' do
     session[:booking_id] = params[:id]
     @booking = Booking.first(:id => session[:booking_id])
-    
+
     erb :'spaces/confirm_request'
   end
 
+  post '/bookings/confirmation' do
+    session[:booking_id]
+    if params[:decision] == "confirm"
+      booking = Booking.first(:id => session[:booking_id])
+      booking.update(:confirmed => true)
+      redirect '/spaces/requests'
+    else
 
+    end
+  end
 end

@@ -54,14 +54,14 @@ So I can prepare my space for use
 I want to be able to see the requests that have come in
 ```
 ```
-As a space-owner
-So that I can approve who stays
-I want to be able to approve or deny requests from guests.
-```
-```
 As a space-seeker
 So that I know where I want to stay
 I want to be able to see the requests that I've made
+```
+```
+As a space-owner
+So that I can approve who stays
+I want to be able to approve or deny requests from guests.
 ```
 ```
 As a space-seeker
