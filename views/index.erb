@@ -13,10 +13,6 @@
     <input type='submit' value='Sign up'>
   </form>
 
-  <% if flash[:nomatch] %>
-    <div id='flash' class='nomatch'>
-      <a class="close" data-dismiss="alert"><%= flash[:nomatch] %></a>
-    </div>
-  <% end %>
+  <%= flash[:nomatch] %>
   
 </body>
