@@ -1,8 +1,10 @@
 require 'sinatra/base'
+require 'sinatra/flash'
 require_relative 'lib/database_connection_setup'
 
 class MakersBNB < Sinatra::Base
   enable :sessions
+  register Sinatra::Flash
 
   get '/' do
     redirect '/spaces' if session[:user] != nil
@@ -14,7 +16,10 @@ class MakersBNB < Sinatra::Base
   end
 
   post '/users' do
-    redirect '/' if params[:password] != params[:password_confirmation]
+    if params[:password] != params[:password_confirmation]
+      flash[:nomatch] = "Passwords don't match"
+      redirect '/'
+    end
     User.create(email: params[:email], password: params[:password])
     session[:user] = User.authenticate(email: params[:email], password: params[:password])
     redirect '/spaces'
@@ -48,9 +53,10 @@ class MakersBNB < Sinatra::Base
 
   post '/sessions/new' do
     session[:user] = User.authenticate(email: params[:email], password: params[:password])
-    p session[:user]
-    redirect '/sessions/new' if session[:user].nil?
-
+    if session[:user].nil?
+      flash[:nomatch] = "Your username or password is incorrect"
+      redirect '/sessions/new'
+    end
     redirect '/spaces'
   end
 
