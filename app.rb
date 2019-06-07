@@ -37,6 +37,7 @@ class MakersBNB < Sinatra::Base
 
   post '/spaces/new' do
     user = session[:user]
+    p params
     Space.create(
       name: params[:name],
       description: params[:description],
@@ -51,7 +52,7 @@ class MakersBNB < Sinatra::Base
     elsif params[:description].empty?
       flash[:incorrect_details] = "Please fill in the required fields."
       redirect 'spaces/new'
-    elsif params[:price].empty? || params[:price] != Integer
+    elsif params[:price].empty? || !params[:price].match?(/\d/)
       flash[:correct_price] = 'Please enter a number.'
       redirect '/spaces/new'
     elsif params[:checkin].empty?
@@ -61,7 +62,9 @@ class MakersBNB < Sinatra::Base
       flash[:incorrect_details] = "Please fill in the required fields."
       redirect 'spaces/new'
     else
+
       redirect '/spaces'
+      
     end
   end
 
@@ -103,7 +106,7 @@ class MakersBNB < Sinatra::Base
       redirect "/spaces/bookings/#{space_id}"
     else
       flash[:request_confirmation] = "Booking request has been sent."
-      redirect "/spaces/bookings/#{space_id}"
+      redirect "/spaces"
      end   
   end
 
