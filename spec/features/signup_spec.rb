@@ -6,6 +6,15 @@ feature 'Signup' do
   scenario 'a new user signs up and is taken to /spaces page' do
     sign_up
     expect(page).to have_content("Book a Space")
+    expect(page).not_to have_content("Passwords don't match")
+
+  end
+
+  scenario 'all fields are left empty' do
+    visit('/')
+    click_button 'Sign up'
+    expect(page).to have_content("Sign up to MakersBnB")
+    expect(page).to have_content("Please fill in the required fields.")
   end
 
   scenario 'passwords do not match: user taken back to sign-up page' do
@@ -13,7 +22,8 @@ feature 'Signup' do
     fill_in 'email', with: 'user@makersbnb.com'
     fill_in 'password', with: 'passw0rd'
     fill_in 'password_confirmation', with: 'other_passw0rd'
-    click_button 'sign up'
+    click_button 'Sign up'
     expect(page).to have_content("Sign up to MakersBnB")
+    expect(page).to have_content("Passwords don't match")
   end
 end

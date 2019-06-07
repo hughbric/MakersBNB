@@ -28,8 +28,10 @@
         <label for="confirm_password"><b>confirm password</b></label>
         <input class="field" id="confirm_password" type='password' name='password_confirmation' placeholder='confirm password'>
         <br>
-        <input class="button" type='submit' value='sign up'>
+        <input class="button" type='submit' value='Sign up'>
       </form>
+      <%= flash[:incorrect_details] %>
+      <%= flash[:nomatch] %>
     </div>
   </body>
 </html>

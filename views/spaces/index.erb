@@ -14,9 +14,10 @@
   <div class="sessionTile">
   <img class="logo" src="/img/logo.png">
   <div class="pagetitle" id="navigation2">
-    <a href='/spaces'>Spaces</a><span class="divider">|</span><a href='/spaces/requests'>Requests</a><span class="divider">|</span><a href='/sessions/logout'>Sign out</a>
+    <a href='/spaces'>Spaces</a><span class="divider">|</span><a href='/bookings/requests'>Requests</a><span class="divider">|</span><a href='/sessions/logout'>Sign out</a>
   </div>
   <br>
+  <%= flash[:request_confirmation] %>
   <form action='/spaces/new'>
     <h1 style="text-align:center">Book a Space</h1>
     <button>List a space</button>
@@ -25,10 +26,13 @@
     <label class="inlinelabels" for="checkin"><b>Available from:</b></label>
     <label class="inlinelabels" for="checkin"><b>Available to:</b></label>
     <br>
-    <input class="field2" type='date' id='checkin' name='checkin'>
-    <input class="field2" type='date' id='checkout' name='checkout'>
-    <input class="field2" type='submit' value='List Spaces'>
+    <input class="field2" type='date' id='available_from' name='available_from'>
+    <input class="field2" type='date' id='available_to' name='available_to'>
+    <input class="field2" type='submit' value='Filter Spaces'>
   </form>
+  <br>
+  <%= flash[:dates_selected] %>
+  <br>
 
   <% @spaces.each do |space| %>
 
