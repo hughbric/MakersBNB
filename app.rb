@@ -45,9 +45,21 @@ class MakersBNB < Sinatra::Base
       checkout: params[:checkout],
       user_id: user.id
     )
-    if params[:price] != Integer
+    if params[:name].empty?
+      flash[:incorrect_details] = "Please fill in the required fields."
+      redirect 'spaces/new'
+    elsif params[:description].empty?
+      flash[:incorrect_details] = "Please fill in the required fields."
+      redirect 'spaces/new'
+    elsif params[:price].empty? || params[:price] != Integer
       flash[:correct_price] = 'Please enter a number.'
       redirect '/spaces/new'
+    elsif params[:checkin].empty?
+      flash[:incorrect_details] = "Please fill in the required fields."
+      redirect 'spaces/new'
+    elsif params[:checkout].empty?
+      flash[:incorrect_details] = "Please fill in the required fields."
+      redirect 'spaces/new'
     else
       redirect '/spaces'
     end
@@ -86,8 +98,13 @@ class MakersBNB < Sinatra::Base
   post '/spaces/request' do
     space_id = session[:id]
     Booking.create(arrival: params[:request_from], departure: params[:request_until], space_id: space_id)
-    flash[:request_confirmation] = "Booking request has been sent."
-    redirect '/spaces'
+    if params[:request_from] >= params[:request_until]
+      flash[:incorrect_dates] = "Please enter the correct dates."
+      redirect "/spaces/bookings/#{space_id}"
+    else
+      flash[:request_confirmation] = "Booking request has been sent."
+      redirect "/spaces/bookings/#{space_id}"
+     end   
   end
 
 end

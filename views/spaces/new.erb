@@ -9,8 +9,11 @@
   <div>
     <a href='/spaces'>Spaces</a> | <a href='/spaces/requests'>Requests</a> | <a href='/sessions/logout'>Sign out</a>
   </div>
-
-  <h1 style='margin-top: 100px; text-align: center'>Create a new space:</h1>
+  <br>
+  <br>
+  <%= flash[:incorrect_details] %>
+  <br>
+  <h1 style='margin-top: 50px; text-align: center'>Create a new space:</h1>
 
   <form action="/spaces/new" method="post">
     <h3>Name:</h3>
@@ -27,4 +30,4 @@
     <button type='submit'>List space</button>
   </form>
 
-</body>
+</body> 

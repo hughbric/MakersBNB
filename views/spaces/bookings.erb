@@ -12,18 +12,32 @@
   <h2>Please book your space</h2>
   <form action='/spaces/request' method='post'>
 
-    <%= @record.name %>. <br>
+    <%= @record.name %> <br><br>
+    <br>  
 
-    Room description <br><div><%= @record.description %></div><br>
+    <%= @record.description %><br>
+    
+    <br>
+    <br>
 
     The price per night costs: <%= @record.price %>
+    
+    <br>
+    <br>
     <br>
 
     <label for="arrival">Request from:</label>
     <input type="date" name="request_from" min="<%= @record.checkin %>" max="<%= @record.checkout %>">
     <label for="departure">Request until:</label>
     <input type="date" name="request_until" min="<%= @record.checkin %>" max="<%= @record.checkout %>">
+    <br>
+    <br>
+    <br>
     <input type="submit" value="Request to Book">
+    <br>
+    <br>
+    <br>
+    <%= flash[:incorrect_dates] %>
   </form>
 </body>
  
