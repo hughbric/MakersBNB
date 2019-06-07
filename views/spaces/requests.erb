@@ -25,6 +25,7 @@
   <h2>Requests I've received</h2>
 
   <% @bookings_received.each do |booking| %>
+  <a href='/spaces/confirm_request/<%= booking.id %>' id='bookingID_<%= booking.id %>'>
       <button class='received'>
       <h3><%= booking.space.name %></h3>
       <p><%= "Unconfirmed" unless booking.confirmed %></p>
@@ -32,6 +33,7 @@
       <p>Checkout: <%= booking.departure %></p>
       </button>
       <br>
+    </a>
   <% end %>
 
 

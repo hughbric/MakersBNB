@@ -1,0 +1,15 @@
+<head>
+  <title>Confirm a request</title>
+  <link rel="stylesheet" href="/style.css"/>
+</head>
+
+<body>
+  <h1>Request for '<%= @booking.space.name %>'</h1>
+
+    From: <%= @booking.user.email %>
+    Date: <%= @booking.arrival %>
+  <form action='' method='post'>
+    <input id="confirm" type="submit" value="Confirm request from <%= @booking.user.email %>">
+    <input id="deny" type="submit" value="Deny request from <%= @booking.user.email %>">
+  </form>
+</body>

@@ -91,4 +91,12 @@ class MakersBNB < Sinatra::Base
     erb :'spaces/requests'
   end
 
+  get '/spaces/confirm_request/:id' do
+    session[:booking_id] = params[:id]
+    @booking = Booking.first(:id => session[:booking_id])
+    
+    erb :'spaces/confirm_request'
+  end
+
+
 end
