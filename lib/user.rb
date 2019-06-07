@@ -8,6 +8,7 @@ class User
   property :password,    String, :required => true
 
   has n, :spaces
+  has n, :bookings
 
   def self.authenticate(email:, password:)
     all_users_with_email = all(email: email)

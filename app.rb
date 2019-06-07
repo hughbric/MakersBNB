@@ -66,16 +66,21 @@ class MakersBNB < Sinatra::Base
   end
 
   get '/spaces/bookings/:id' do
-    id = params[:id]
-    session[:id] = id
-    @record = Space.first(:id => id)
+    session[:space_id] = params[:id]
+    @space = Space.first(:id => session[:space_id])
     erb :'spaces/bookings'
   end
 
   post '/spaces/request' do
-    space_id = session[:id]
+    space_id = session[:space_id]
+    user = session[:user]
     # flash messsage 'Request to book has been sent'
-    booking = Booking.create(arrival: params[:request_from], departure: params[:request_until], space_id: space_id)
+    booking = Booking.create(
+      arrival: params[:request_from],
+      departure: params[:request_until],
+      space_id: space_id,
+      user_id: user.id
+    )
     redirect '/spaces'
   end
 
