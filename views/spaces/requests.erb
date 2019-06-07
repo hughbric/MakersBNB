@@ -10,10 +10,10 @@
 
   <h1>Requests</h1>
 
-  <h2>Requests I've received</h2>
+  <h2>Requests I've made</h2>
 
-  <% @bookings.each do |booking| %>
-      <button class='requests'>
+  <% @bookings_made.each do |booking| %>
+      <button class='made'>
       <h3><%= booking.space.name %></h3>
       <p><%= "Unconfirmed" unless booking.confirmed %></p>
       <p>Checkin: <%= booking.arrival %></p>
@@ -21,4 +21,19 @@
       </button>
       <br>
   <% end %>
+
+  <h2>Requests I've received</h2>
+
+  <% @bookings_received.each do |booking| %>
+      <button class='received'>
+      <h3><%= booking.space.name %></h3>
+      <p><%= "Unconfirmed" unless booking.confirmed %></p>
+      <p>Checkin: <%= booking.arrival %></p>
+      <p>Checkout: <%= booking.departure %></p>
+      </button>
+      <br>
+  <% end %>
+
+
+
 </body>

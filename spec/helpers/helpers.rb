@@ -6,6 +6,14 @@ def sign_up
   click_button 'Sign up'
 end
 
+def other_sign_up
+  visit('/')
+  fill_in 'email', with: 'other_user@makersbnb.com'
+  fill_in 'password', with: 'passw0rd'
+  fill_in 'password_confirmation', with: 'passw0rd'
+  click_button 'Sign up'
+end
+
 def login
   visit('/')
   click_link 'Log in'

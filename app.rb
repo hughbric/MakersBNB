@@ -86,7 +86,8 @@ class MakersBNB < Sinatra::Base
 
   get '/spaces/requests' do
     user = session[:user]
-    @bookings = Booking.all({:confirmed =>nil, Booking.space.user.id => user.id})
+    @bookings_made = Booking.all(:user_id => user.id)
+    @bookings_received = Booking.all({:confirmed =>nil, Booking.space.user.id => user.id})
     erb :'spaces/requests'
   end
 
