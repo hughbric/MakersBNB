@@ -2,13 +2,16 @@
 <head>
   <title>Book a Space</title>
   <link rel="stylesheet" href="/style.css"/>
+
 </head>
 
 <body>
   <div>
     <a href='/spaces'>Spaces</a> | <a href='/spaces/requests'>Requests</a> | <a href='/sessions/logout'>Sign out</a>
   </div>
-
+  <br>
+  <br>
+  <%= flash[:request_confirmation] %>
 <form action='/spaces/new'>
   <button>List a space</button>
 </form>

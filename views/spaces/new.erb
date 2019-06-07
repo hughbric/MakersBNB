@@ -7,7 +7,7 @@
   <h1 style='margin-top: 100px; text-align: center'>Create a new space:</h1>
 
   <div>
-    <a href='/spaces'>Spaces</a> | <a href='/spaces/requests'>Requests</a>
+    <a href='/spaces'>Spaces</a> | <a href='/spaces/requests'>Requests</a> | <a href='/sessions/logout'>Sign out</a>
   </div>
 
   <h1 style='margin-top: 100px; text-align: center'>Create a new space:</h1>
@@ -18,7 +18,9 @@
     <h3>Description:</h3>
     <input type='text' id='description' name='description' placeholder='Enter description...'><br>
     <h3>Price per night:</h3>
-    <input type='text' id='price' name='price' placeholder='Enter price per night'><br>
+    <input type='text' id='price' name='price' placeholder='Enter price per night'> 
+    <%= flash[:correct_price] %>
+    <br>
     <h3>Select dates:</h3>
     <input type='date' id='checkin' name='checkin'>
     <input type='date' id='checkout' name='checkout'><br><br>

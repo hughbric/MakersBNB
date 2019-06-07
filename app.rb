@@ -22,7 +22,13 @@ class MakersBNB < Sinatra::Base
     end
     User.create(email: params[:email], password: params[:password])
     session[:user] = User.authenticate(email: params[:email], password: params[:password])
-    redirect '/spaces'
+    p session[:user]
+    if session[:user].nil?
+      flash[:incorrect_details] = "Please fill in the required fields."
+      redirect '/'
+    else
+      redirect '/spaces'
+    end
   end
 
   get '/spaces/new' do
@@ -39,7 +45,12 @@ class MakersBNB < Sinatra::Base
       checkout: params[:checkout],
       user_id: user.id
     )
-    redirect '/spaces'
+    if params[:price] != Integer
+      flash[:correct_price] = 'Please enter a number.'
+      redirect '/spaces/new'
+    else
+      redirect '/spaces'
+    end
   end
 
   get '/spaces' do
@@ -74,8 +85,8 @@ class MakersBNB < Sinatra::Base
 
   post '/spaces/request' do
     space_id = session[:id]
-    # flash messsage 'Request to book has been sent'
-    booking = Booking.create(arrival: params[:request_from], departure: params[:request_until], space_id: space_id)
+    Booking.create(arrival: params[:request_from], departure: params[:request_until], space_id: space_id)
+    flash[:request_confirmation] = "Booking request has been sent."
     redirect '/spaces'
   end
 

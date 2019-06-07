@@ -19,5 +19,6 @@ feature 'requests' do
     fill_in 'request_until', with: '22/07/2019'
     click_button 'Request to Book'
     expect(page).to have_content 'Book a Space'
+    expect(page).to have_content 'Booking request has been sent.'
   end
 end
