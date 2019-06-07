@@ -1,0 +1,41 @@
+<head>
+  <title>Requests</title>
+  <link rel="stylesheet" href="/style.css"/>
+</head>
+
+<body>
+  <div>
+    <a href='/spaces'>Spaces</a> | <a href='/spaces/requests'>Requests</a> | <a href='/sessions/logout'>Sign out</a>
+  </div>
+
+  <h1>Requests</h1>
+
+  <h2>Requests I've made</h2>
+
+  <% @bookings_made.each do |booking| %>
+      <button class='made'>
+      <h3><%= booking.space.name %></h3>
+      <p><%= "Unconfirmed" if booking.confirmed == nil %></p>
+      <p><%= booking.confirmed ? "Approved" : 'Denied' %></p>
+      <p>Checkin: <%= booking.arrival %></p>
+      <p>Checkout: <%= booking.departure %></p>
+      </button>
+      <br>
+  <% end %>
+
+  <h2>Requests I've received</h2>
+
+  <% @bookings_received.each do |booking| %>
+  <a href='/spaces/confirm_request/<%= booking.id %>' id='bookingID_<%= booking.id %>'>
+      <button class='received'>
+      <h3><%= booking.space.name %></h3>
+      <p><%= "Unconfirmed" if booking.confirmed == nil %></p>
+      <p><%= booking.confirmed ? "Approved" : "Denied" %></p>
+      <p>Checkin: <%= booking.arrival %></p>
+      <p>Checkout: <%= booking.departure %></p>
+      </button>
+      <br>
+    </a>
+  <% end %>
+
+</body>

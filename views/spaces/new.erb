@@ -1,20 +1,29 @@
+
+<html lang="en">
 <head>
+
+  <link rel="shortcut icon" href="img/favicon3.ico" />
   <title>List a new space</title>
- <link rel="stylesheet" href="/style.css"/>
+  <link rel="stylesheet" href="/style.css"/>
+  <link rel="stylesheet" href="/vegas/vegas.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300&display=swap" rel="stylesheet">
+  <script src="jquery.js"></script>
+  <script src="interface.js"></script>
+  <script src="/vegas/vegas.min.js"></script>
 </head>
 
 <body>
-  <h1 style='margin-top: 100px; text-align: center'>Create a new space:</h1>
-
-  <div>
-    <a href='/spaces'>Spaces</a> | <a href='/spaces/requests'>Requests</a>
-  </div>
-
-  <h1 style='margin-top: 100px; text-align: center'>Create a new space:</h1>
+  <div class="sessionTile">
+    <img class="logo" src="/img/logo.png">
+    <div id="navigation">
+      <a href='/spaces'>Spaces</a><span class="divider">|</span><a href='/spaces/requests'>Requests</a><span class="divider">|</span><a href='/sessions/logout'>Sign out</a>
+    </div>
 
   <form action="/spaces/new" method="post">
-    <h3>Name:</h3>
+    <h1>Create a new space</h1>
+    <label for="name"><b>name:</b></label>
     <input type='text' id='name' name='name' placeholder='Name'><br>
+    <br>
     <h3>Description:</h3>
     <input type='text' id='description' name='description' placeholder='Enter description...'><br>
     <h3>Price per night:</h3>
@@ -24,5 +33,6 @@
     <input type='date' id='checkout' name='checkout'><br><br>
     <button type='submit'>List space</button>
   </form>
-
+  </div>
 </body>
+</html>
