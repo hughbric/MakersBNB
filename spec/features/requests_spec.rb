@@ -14,7 +14,10 @@ feature 'requests' do
   scenario 'a user can request to book a space' do
     sign_up
     list_space
-    book_space
-    expect(page).to have_content 'Booking request has been sent.'
+    click_link('spaceID_1')
+    fill_in 'request_from', with: '21/07/2019'
+    fill_in 'request_until', with: '22/07/2019'
+    click_button 'Request to book'
+    expect(page).to have_content 'Book a Space'
   end
 end

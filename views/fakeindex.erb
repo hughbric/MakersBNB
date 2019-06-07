@@ -1,0 +1,63 @@
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="img/favicon3.ico"/>
+    <title>Book a Space</title>
+    <link rel="stylesheet" href="/fake_style.css"/>
+    <link rel="stylesheet" href="/vegas/vegas.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300&display=swap" rel="stylesheet">
+    <script src="jquery.js"></script>
+    <script src="interface.js"></script>
+    <script src="/vegas/vegas.min.js"></script>
+</head>
+<body>
+
+<h2>Responsive Inline Form</h2>
+<p>We have created an inline form that will stay horizontal until the screen width of the browser window is less than 850 pixels: then the form is displayed vertically instead of horizontally.</p>
+<p>Resize the browser window to see the effect.</p>
+
+<form class="form-inline" action="/action_page.php">
+  <label for="email">Email:</label>
+  <input type="email" id="email" placeholder="Enter email" name="email">
+  <label for="pwd">Password:</label>
+  <input type="password" id="pwd" placeholder="Enter password" name="pswd">
+  <label>
+    <input type="checkbox" name="remember"> Remember me
+  </label>
+  <button type="submit">Submit</button>
+</form>
+
+</body>
+<!--
+<body>
+  <div class="sessionTile">
+  <img class="logo" src="/img/logo.png">
+  <div id="navigation">
+    <a href='/spaces'>Spaces</a><span class="divider">|</span><a href='/spaces/requests'>Requests</a><span class="divider">|</span><a href='/sessions/logout'>Sign out</a>
+  </div>
+  <h1>Book a Space</h1>
+  <form action='/spaces/new'>
+    <button>List a space</button>
+  </form>
+  <form action="/spaces/bookings" method="post">
+    <label for="checkin"><b>Available from</b></label>
+    <input class="field2" type='date' id='checkin' name='checkin'>
+    <label for="checkin"><b>Available to</b></label>
+    <input class="field2" type='date' id='checkout' name='checkout'>
+    <input class="field2" type='submit' value='List Spaces'>
+  </form>
+
+  <%# <% @spaces.each do |space| %>
+
+  <a href='/spaces/bookings/<%= space.id %>' id='spaceID_<%= space.id %>'>
+    <button class=''>
+    <h3><%= space.name %></h3>
+    <p><%= space.description %></p>
+    <p>£<%= space.price %> / night</p>
+    </button>
+    <br>
+  </a>
+
+  <% end %> %>
+  </div>
+</body> -->
+</html>

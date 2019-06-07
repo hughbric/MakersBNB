@@ -55,7 +55,7 @@ feature "flash error messages" do
 		click_link('spaceID_1')
 	    fill_in 'request_from', with: '22/07/2019'
 	    fill_in 'request_until', with: '21/07/2019'
-	    click_button 'Request to Book'
+	    click_button 'Request to book'
 	    expect(page).to have_content 'Please enter the correct dates.'
 	end
 

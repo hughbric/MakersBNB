@@ -44,7 +44,7 @@ def book_space
   click_link('spaceID_1')
   fill_in 'request_from', with: '21/07/2019'
   fill_in 'request_until', with: '22/07/2019'
-  click_button 'Request to Book'
+  click_button 'Request to book'
 end
 
 def logout

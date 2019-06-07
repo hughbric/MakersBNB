@@ -1,22 +1,31 @@
+<html lang="en">
   <head>
-    <title>LogIn</title>
+    <link rel="shortcut icon" href="img/favicon3.ico"/>
+    <title>MakersBnB-LogIn</title>
     <link rel="stylesheet" href="/style.css"/>
+    <link rel="stylesheet" href="/vegas/vegas.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300&display=swap" rel="stylesheet">
+    <script src="jquery.js"></script>
+    <script src="/vegas/vegas.min.js"></script>
   </head>
 
-  <body>
-    <h1>Log in to MakersBnB</h1><br>
-    <h1>Email Address</h1>
-    <form action='/sessions/new' method='post'>
-      <input type='text' name='email' placeholder='Email'>
-      <input type='password' name='password' placeholder='Password'>
-      <input type='submit' value='Log in'>
-    </form>
-    
-    <form action='/'>
-      <h4>OR</h4>
-      <button>SIGN UP</button>
-    </form>
-
-    <%= flash[:nomatch] %>
-    
+  <body background="/img/MakersBNB.jpg">
+    <div class="loginTile">
+      <img class="logo" src="/img/logo.png">
+      <div id="navigation">
+        <a href="/sessions/new">Log in</a><span class="divider">|</span><a href="/">About</a>
+      </div>
+      <form action='/sessions/new' method='post'>
+        <h1>Log in to MakersBnB</h1><br>
+        <label for="email"><b>email address</b></label>
+        <input class="field" id="email" type='text' name='email' placeholder='email'>
+        <br>
+        <label for="password"><b>password</b></label>
+        <input class="field" id="password" type='password' name='password' placeholder='password'>
+        <br>
+        <input class="button1" type='submit' value='Log in'>
+      </form>
+      <%= flash[:nomatch] %>
+    </div>
   </body>
+</html>

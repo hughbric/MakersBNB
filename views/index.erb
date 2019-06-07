@@ -1,18 +1,37 @@
-<head>
-  <title>MakersBNB</title>
-  <link rel="stylesheet" href="/style.css"/>
-</head>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="img/favicon3.ico" />
+    <title>MakersBNB</title>
+    <link rel="stylesheet" href="/style.css"/>
+    <link rel="stylesheet" href="/vegas/vegas.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300&display=swap" rel="stylesheet">
+    <script src="jquery.js"></script>
+    <script src="interface.js"></script>
+    <script src="/vegas/vegas.min.js"></script>
+  </head>
 
-<body>
-  <a href="/sessions/new">Log in</a>
-  <h2>Sign up to MakersBnB</h2>
-  <form action='/users' method='post'>
-    <input type='text' name='email' placeholder='Email'>
-    <input type='password' name='password' placeholder='Password'>
-    <input type='password' name='password_confirmation' placeholder='Confirm Password'>
-    <input type='submit' value='Sign up'>
-  </form>
-  <%= flash[:incorrect_details] %>
-  <%= flash[:nomatch] %>
-  
-</body>
+  <body>
+    <div class="mainTile">
+      <img class="logo" src="/img/logo.png">
+      <div id="navigation">
+        <a href="/sessions/new">Log in</a><span class="divider">|</span><a href="/">About</a>
+      </div>
+      <form class="signUpForm" action='/users' method='post'>
+        <h1>Feel at home, anywhere.</h1>
+        <h2>Sign up to MakersBnB</h2>
+        <label for="email"><b>email address</b></label>
+        <input class="field" id="email" type='text' name='email' placeholder='email'>
+        <br>
+        <label for="password"><b>password</b></label>
+        <input class="field" id="password" type='password' name='password' placeholder='password'>
+        <br>
+        <label for="confirm_password"><b>confirm password</b></label>
+        <input class="field" id="confirm_password" type='password' name='password_confirmation' placeholder='confirm password'>
+        <br>
+        <input class="button" type='submit' value='Sign up'>
+      </form>
+      <%= flash[:incorrect_details] %>
+      <%= flash[:nomatch] %>
+    </div>
+  </body>
+</html>

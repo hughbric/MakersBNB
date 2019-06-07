@@ -1,26 +1,34 @@
-
-<head>
-  <title>Book a Space</title>
-  <link rel="stylesheet" href="/style.css"/>
-
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="img/favicon3.ico"/>
+    <title>Book a Space</title>
+    <link rel="stylesheet" href="/style.css"/>
+    <link rel="stylesheet" href="/vegas/vegas.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300&display=swap" rel="stylesheet">
+    <script src="jquery.js"></script>
+    <script src="interface.js"></script>
+    <script src="/vegas/vegas.min.js"></script>
 </head>
 
 <body>
-  <div>
-    <a href='/spaces'>Spaces</a> | <a href='/bookings/requests'>Requests</a> | <a href='/sessions/logout'>Sign out</a>
+  <div class="sessionTile">
+  <img class="logo" src="/img/logo.png">
+  <div class="pagetitle" id="navigation2">
+    <a href='/spaces'>Spaces</a><span class="divider">|</span><a href='/bookings/requests'>Requests</a><span class="divider">|</span><a href='/sessions/logout'>Sign out</a>
   </div>
   <br>
-  <br>
   <%= flash[:request_confirmation] %>
-<form action='/spaces/new'>
-  <button>List a space</button>
-</form>
-  <h2>Book a Space</h2>
-  
+  <form action='/spaces/new'>
+    <h1 style="text-align:center">Book a Space</h1>
+    <button>List a space</button>
+  </form>
   <form action="/spaces/bookings" method="post">
-    <input type='date' id='available_from' name='available_from'>
-    <input type='date' id='available_to' name='available_to'>
-    <input type='submit' value='Filter Spaces'>
+    <label class="inlinelabels" for="checkin"><b>Available from:</b></label>
+    <label class="inlinelabels" for="checkin"><b>Available to:</b></label>
+    <br>
+    <input class="field2" type='date' id='available_from' name='available_from'>
+    <input class="field2" type='date' id='available_to' name='available_to'>
+    <input class="field2" type='submit' value='Filter Spaces'>
   </form>
   <br>
   <%= flash[:dates_selected] %>
@@ -29,7 +37,7 @@
   <% @spaces.each do |space| %>
 
   <a href='/spaces/bookings/<%= space.id %>' id='spaceID_<%= space.id %>'>
-    <button class='listing'>
+    <button class=''>
     <h3><%= space.name %></h3>
     <p><%= space.description %></p>
     <p>£<%= space.price %> / night</p>
@@ -38,4 +46,6 @@
   </a>
 
   <% end %>
+  </div>
 </body>
+</html>
