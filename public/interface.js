@@ -1,6 +1,5 @@
 $(function() {
-
-  $("body").vegas({
+  $('body').vegas({
     transitionDuration: 2000,
     delay: 7000,
     timer: false,

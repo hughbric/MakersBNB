@@ -13,7 +13,7 @@ def sign_up
   fill_in 'email', with: 'user@makersbnb.com'
   fill_in 'password', with: 'passw0rd'
   fill_in 'password_confirmation', with: 'passw0rd'
-  click_button 'Sign up'
+  click_button 'sign up'
 end
 
 def login
@@ -21,7 +21,7 @@ def login
   click_link 'Log in'
   fill_in 'email', with: 'user@makersbnb.com'
   fill_in 'password', with: 'passw0rd'
-  click_button 'Log in'
+  click_button 'log in'
 end
 
 def logout

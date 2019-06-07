@@ -5,7 +5,7 @@
 
 <body>
   <h2>Please book your space</h2>
-  <form action='/spaces/requests' method='post'>
+  <form action='/spaces/request' method='post'>
 
     Hello <%= @record.name %>. <br>
 
@@ -18,6 +18,6 @@
     <input type="date" name="request_from" min="<%= @record.checkin %>" max="<%= @record.checkout %>">
     <label for="departure">Request until:</label>
     <input type="date" name="request_until" min="<%= @record.checkin %>" max="<%= @record.checkout %>">
-    <input type="submit" value="Request booking">
+    <input type="submit" value="Request to book">
   </form>
 </body>

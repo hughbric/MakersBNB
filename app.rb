@@ -9,8 +9,8 @@ class MakersBNB < Sinatra::Base
     erb :index
   end
 
-  get '/fake' do
-    erb :index_mock
+  get '/faker' do
+    erb :fakeindex
   end
 
   post '/users' do
@@ -65,8 +65,13 @@ class MakersBNB < Sinatra::Base
     erb :'spaces/bookings'
   end
 
-  # get '/spaces/requests/:id' do
-  #   erb :'spaces/requests'
-  # end
+  post '/spaces/request' do
+    space_id = session[:id]
+    # flash messsage 'Request to book has been sent'
+    booking = Booking.create(arrival: params[:request_from], departure: params[:request_until], space_id: space_id)
+    p booking
+    p booking.saved?
+    redirect '/spaces'
+end
 
 end

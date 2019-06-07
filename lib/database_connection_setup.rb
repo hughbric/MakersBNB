@@ -3,6 +3,7 @@ require 'dm-postgres-adapter'
 require 'dm-validations'
 require_relative 'space'
 require_relative 'user'
+require_relative 'booking'
 
 if ENV['RACK_ENV'] == 'test'
   # DataMapper::Logger.new(STDOUT, :debug)

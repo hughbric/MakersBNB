@@ -10,7 +10,7 @@ feature 'Booking a space' do
     click_link('spaceID_1')
     expect(page).to have_content 'Please book your space'
     expect(page).to have_content 'Comfortable warm bed, double room.'
-    expect(page).to have_button'Request booking'
+    expect(page).to have_button'Request to book'
   end
 
 end
