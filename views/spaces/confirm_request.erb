@@ -10,6 +10,6 @@
     Date: <%= @booking.arrival %>
   <form action='/bookings/confirmation' method='post'>
     <button id="confirm" type="submit" name="decision" value="confirm">Confirm request from <%= @booking.user.email %></button>
-    <input id="deny" type="submit" value="Deny request from <%= @booking.user.email %>">
+    <button id="deny" type="submit" name="decision" value="deny">Deny request from <%= @booking.user.email %></button>
   </form>
 </body>
