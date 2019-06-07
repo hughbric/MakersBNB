@@ -15,6 +15,6 @@ feature 'requests' do
     sign_up
     list_space
     book_space
-    expect(page).to have_content 'Book a Space'
+    expect(page).to have_content 'Booking request has been sent.'
   end
 end

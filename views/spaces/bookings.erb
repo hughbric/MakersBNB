@@ -4,6 +4,11 @@
 </head>
 
 <body>
+
+  <div>
+    <a href='/spaces'>Spaces</a> | <a href='/spaces/requests'>Requests</a> | <a href='/sessions/logout'>Sign out</a>
+  </div>
+
   <h2>Please book your space</h2>
   <form action='/spaces/request' method='post'>
 
@@ -19,5 +24,9 @@
     <label for="departure">Request until:</label>
     <input type="date" name="request_until" min="<%= @space.checkin %>" max="<%= @space.checkout %>">
     <input type="submit" value="Request to Book">
+    <br>
+    <br>
+    <br>
+    <%= flash[:incorrect_dates] %>
   </form>
 </body>

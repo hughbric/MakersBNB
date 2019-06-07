@@ -10,6 +10,13 @@ feature 'Signup' do
 
   end
 
+  scenario 'all fields are left empty' do
+    visit('/')
+    click_button 'Sign up'
+    expect(page).to have_content("Sign up to MakersBnB")
+    expect(page).to have_content("Please fill in the required fields.")
+  end
+
   scenario 'passwords do not match: user taken back to sign-up page' do
     visit('/')
     fill_in 'email', with: 'user@makersbnb.com'
