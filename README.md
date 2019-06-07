@@ -2,6 +2,10 @@
 
 This is a web application that allows users to list spaces they have available, and to hire spaces for the night.
 
+## How to use
+
+Fill this in!!
+
 ## User Stories :point_down:
 
 ```
@@ -46,8 +50,23 @@ I want to be able to request to hire a space on a specific date that is availabl
 ```
 ```
 As a space-owner
+So I can prepare my space for use
+I want to be able to see the requests that have come in
+```
+```
+As a space-owner
 So that I can approve who stays
 I want to be able to approve or deny requests from guests.
+```
+```
+As a space-seeker
+So that I know where I want to stay
+I want to be able to see the requests that I've made
+```
+```
+As a space-seeker
+So that I know my booking is confirmed
+I want to be able to see if my request has been approved or denied
 ```
 ```
 As a space-owner

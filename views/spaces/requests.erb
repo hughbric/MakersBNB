@@ -1,0 +1,24 @@
+<head>
+  <title>Requests</title>
+  <link rel="stylesheet" href="/style.css"/>
+</head>
+
+<body>
+  <div>
+    <a href='/spaces'>Spaces</a> | <a href='/spaces/requests'>Requests</a> | <a href='/sessions/logout'>Sign out</a>
+  </div>
+
+  <h1>Requests</h1>
+
+  <h2>Requests I've received</h2>
+
+  <% @bookings.each do |booking| %>
+      <button class='requests'>
+      <h3><%= booking.space.name %></h3>
+      <p><%= "Unconfirmed" unless booking.confirmed %></p>
+      <p>Checkin: <%= booking.arrival %></p>
+      <p>Checkout: <%= booking.departure %></p>
+      </button>
+      <br>
+  <% end %>
+</body>

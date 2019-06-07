@@ -84,4 +84,10 @@ class MakersBNB < Sinatra::Base
     redirect '/spaces'
   end
 
+  get '/spaces/requests' do
+    user = session[:user]
+    @bookings = Booking.all({:confirmed =>nil, Booking.space.user.id => user.id})
+    erb :'spaces/requests'
+  end
+
 end
