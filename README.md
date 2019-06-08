@@ -17,8 +17,8 @@ $ rackup
 
 ## Screenshots
 
-[Home Page](public/img/home_page.png)
-[Login Page](public/img/login_page)
+[](public/img/home_page.png)
+[](public/img/login_page)
 
 ## User Stories :point_down:
 
