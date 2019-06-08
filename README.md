@@ -4,7 +4,21 @@ This is a web application that allows users to list spaces they have available, 
 
 ## How to use
 
-Fill this in!!
+Clone the project
+
+Run 
+
+```
+$ bundle
+```
+```
+$ rackup
+```
+
+## Screenshots
+
+[Home Page](public/img/home_page.png)
+[Login Page](public/img/login_page)
 
 ## User Stories :point_down:
 
@@ -79,7 +93,7 @@ So that I can choose bookings that suit me
 I want to see the space available until I approve the request for hire.
 ```
 
-## Headline specifications
+## Specifications completed:
 
 * Any signed-up user can list a new space.
 
@@ -91,11 +105,14 @@ I want to see the space available until I approve the request for hire.
 
 * Any signed-up user can request to hire any space for one night, and this should be approved by the user that owns that space.
 
-* Nights for which a space has already been booked should not be available for users to book that space.
+## Specifications needed working on:
+
+* Ovarall CSS styling
+
+* Nights for which a space has already been booked should not be available for users to book that space
 
 * Until a user has confirmed a booking request, that space can still be booked for that night.
 
-## Nice-to-haves
 * Users should receive an email whenever one of the following happens:
 	- They sign up
 	- They create a space
