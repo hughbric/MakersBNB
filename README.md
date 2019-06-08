@@ -18,7 +18,8 @@ $ rackup
 ## Screenshots
 
 ![SignUp page](public/img/home_page.png)
-![Login Page](public/img/login_page)
+
+![Login Page](public/img/login_page.png)
 
 ## User Stories :point_down:
 
