@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/student/Projects/team-projects/MakersBNB/app.rb": [
+      "/Users/breycarr/Documents/projects/MakersBNB/app.rb": [
         1,
         1,
         1,
@@ -157,7 +157,7 @@
         null,
         null
       ],
-      "/Users/student/Projects/team-projects/MakersBNB/spec/features/approve_or_deny_requests_spec.rb": [
+      "/Users/breycarr/Documents/projects/MakersBNB/spec/features/approve_or_deny_requests_spec.rb": [
         1,
         null,
         1,
@@ -206,7 +206,7 @@
         null,
         null
       ],
-      "/Users/student/Projects/team-projects/MakersBNB/spec/helpers/helpers.rb": [
+      "/Users/breycarr/Documents/projects/MakersBNB/spec/helpers/helpers.rb": [
         1,
         25,
         25,
@@ -261,7 +261,7 @@
         17,
         null
       ],
-      "/Users/student/Projects/team-projects/MakersBNB/spec/features/error_messages_spec.rb": [
+      "/Users/breycarr/Documents/projects/MakersBNB/spec/features/error_messages_spec.rb": [
         1,
         null,
         1,
@@ -325,7 +325,7 @@
         null,
         null
       ],
-      "/Users/student/Projects/team-projects/MakersBNB/spec/features/filter_spaces_spec.rb": [
+      "/Users/breycarr/Documents/projects/MakersBNB/spec/features/filter_spaces_spec.rb": [
         1,
         null,
         1,
@@ -339,7 +339,7 @@
         null,
         null
       ],
-      "/Users/student/Projects/team-projects/MakersBNB/spec/features/login_spec.rb": [
+      "/Users/breycarr/Documents/projects/MakersBNB/spec/features/login_spec.rb": [
         1,
         null,
         1,
@@ -364,7 +364,7 @@
         null,
         null
       ],
-      "/Users/student/Projects/team-projects/MakersBNB/spec/features/logout_spec.rb": [
+      "/Users/breycarr/Documents/projects/MakersBNB/spec/features/logout_spec.rb": [
         1,
         null,
         1,
@@ -377,7 +377,7 @@
         null,
         null
       ],
-      "/Users/student/Projects/team-projects/MakersBNB/spec/features/make_a_booking_spec.rb": [
+      "/Users/breycarr/Documents/projects/MakersBNB/spec/features/make_a_booking_spec.rb": [
         1,
         null,
         1,
@@ -399,44 +399,13 @@
         null,
         null
       ],
-      "/Users/student/Projects/team-projects/MakersBNB/spec/features/requests_spec.rb": [
+      "/Users/breycarr/Documents/projects/MakersBNB/spec/features/requests_spec.rb": [
         1,
         null,
         1,
         null,
         1,
         1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/student/Projects/team-projects/MakersBNB/spec/features/signup_spec.rb": [
-        1,
-        null,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
         1,
         1,
         1,
@@ -455,7 +424,38 @@
         null,
         null
       ],
-      "/Users/student/Projects/team-projects/MakersBNB/spec/features/space_booking_spec.rb": [
+      "/Users/breycarr/Documents/projects/MakersBNB/spec/features/signup_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/breycarr/Documents/projects/MakersBNB/spec/features/space_booking_spec.rb": [
         1,
         null,
         1,
@@ -473,7 +473,7 @@
         null,
         null
       ],
-      "/Users/student/Projects/team-projects/MakersBNB/spec/features/space_entry_spec.rb": [
+      "/Users/breycarr/Documents/projects/MakersBNB/spec/features/space_entry_spec.rb": [
         1,
         null,
         1,
@@ -486,7 +486,7 @@
         null,
         null
       ],
-      "/Users/student/Projects/team-projects/MakersBNB/spec/features/viewing_received_requests_spec.rb": [
+      "/Users/breycarr/Documents/projects/MakersBNB/spec/features/viewing_received_requests_spec.rb": [
         1,
         null,
         1,
@@ -502,7 +502,7 @@
         null,
         null
       ],
-      "/Users/student/Projects/team-projects/MakersBNB/spec/features/viewing_sent_requests_spec.rb": [
+      "/Users/breycarr/Documents/projects/MakersBNB/spec/features/viewing_sent_requests_spec.rb": [
         1,
         1,
         1,
@@ -560,7 +560,7 @@
         null,
         null
       ],
-      "/Users/student/Projects/team-projects/MakersBNB/spec/user_spec.rb": [
+      "/Users/breycarr/Documents/projects/MakersBNB/spec/user_spec.rb": [
         1,
         1,
         1,
@@ -583,6 +583,6 @@
         null
       ]
     },
-    "timestamp": 1559927147
+    "timestamp": 1560106474
   }
 }

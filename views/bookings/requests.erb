@@ -16,7 +16,8 @@
       <button class='made'>
       <h3><%= booking.space.name %></h3>
       <p><%= "Unconfirmed" if booking.confirmed == nil %></p>
-      <p><%= booking.confirmed ? "Approved" : 'Denied' %></p>
+      <p><%= "Approved" if booking.confirmed %></p>
+      <p><%= "Denied" if booking.confirmed == false %></p>
       <p>Checkin: <%= booking.arrival %></p>
       <p>Checkout: <%= booking.departure %></p>
       </button>
@@ -30,7 +31,8 @@
       <button class='received'>
       <h3><%= booking.space.name %></h3>
       <p><%= "Unconfirmed" if booking.confirmed == nil %></p>
-      <p><%= booking.confirmed ? "Approved" : "Denied" %></p>
+      <p><%= "Approved" if booking.confirmed %></p>
+      <p><%= "Denied" if booking.confirmed == false %></p>
       <p>Checkin: <%= booking.arrival %></p>
       <p>Checkout: <%= booking.departure %></p>
       </button>
